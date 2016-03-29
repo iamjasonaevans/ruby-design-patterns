@@ -2,4 +2,4 @@
 
 Basic implementation of design patterns in Ruby.
 
-[web](http://www.jasonaevans.com)
+Contact me: [web](http://www.jasonaevans.com) - [twitter](https://twitter.com/iamjasonaevans)
