@@ -2,6 +2,7 @@
 # Type: Behavorial Pattern
 # Intent: Define a one-to-many dependency between objects so that when one object
 #   changes state, all its dependents are notified and updated automatically.
+# Reference: https://sourcemaking.com/design_patterns/observer
 
 module Observer
   attr_reader :observers
@@ -12,7 +13,7 @@ module Observer
 
   def register(observer)
     puts "[subject ] Registering client: #{observer}"
-    @observers << observer
+    @observers.push(observer)
   end
 
   def unregister(observer)
@@ -52,13 +53,15 @@ class Client
   end
 end
 
-s1 = Subject.new()
-c1 = Client.new()
-c2 = Client.new()
-c3 = Client.new()
+s1 = Subject.new
+c1 = Client.new
+c2 = Client.new
+c3 = Client.new
 c1.register(s1)
 c2.register(s1)
 c3.register(s1)
 s1.send_message("this is a test message")
 c3.unregister
 s1.send_message("there are now only two observers")
+puts "--- observes list ---"
+puts s1.observers

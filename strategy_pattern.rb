@@ -1,10 +1,10 @@
 # Pattern: Strategy Pattern
 # Type: Behavorial Pattern
-# Intent: Define a family of algorithms, encapsulate each one, and make 
-#   them interchangeable. Strategy lets the algorithm vary independently 
+# Intent: Define a family of algorithms, encapsulate each one, and make
+#   them interchangeable. Strategy lets the algorithm vary independently
 #   from clients that use it.
 
-class Samurai 
+class Samurai
   attr_accessor :weapon
 
   def initialize(weapon)
@@ -27,13 +27,13 @@ class Sword
   end
 end
 
-class Axe 
-  def attack 
+class Axe
+  def attack
     puts "Throws axe"
   end
 end
 
-class Knife 
+class Knife
   def attack
     puts "Thrusts knife"
   end
