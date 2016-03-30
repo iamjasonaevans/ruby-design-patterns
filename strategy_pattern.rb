@@ -18,9 +18,7 @@ class Samurai
       weapon.attack()
     end
   end
-
 end
-
 
 # Define a family of algorithms
 class Sword
@@ -40,7 +38,6 @@ class Knife
     puts "Thrusts knife"
   end
 end
-
 
 # Examples
 s = Samurai.new(Sword.new)
